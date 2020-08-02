@@ -23,6 +23,9 @@ Route::get('users/profile','UserController@profile')->middleware('auth:api');
 Route::get('users/{id}','UserController@profileById')->middleware('auth:api');
 
 
+Route::get('/', function () {
+    return view('api');
+});
 Route::get('/school','SchoolController@index');
 Route::post('/school/store','SchoolController@store');
 Route::get('/school/create','SchoolController@create');
